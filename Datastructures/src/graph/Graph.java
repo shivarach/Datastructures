@@ -19,7 +19,7 @@ public class Graph {
 	}
 	
 	public void addEdge(int a, int b) {
-		if(a < 0 || a > v || b < 0 || b > v)
+		if(a < 0 || a >= v || b < 0 || b >= v)
 			throw new IllegalArgumentException("vertex out of bound");
 		adj[a].add(b);
 		adj[b].add(a);
@@ -27,7 +27,7 @@ public class Graph {
 	}
 	
 	public List<Integer> getAdjacentVertices(int w) {
-		if(w < v || v >= w)
+		if(w < 0 || w >= v)
 			throw new IllegalArgumentException("vertex of of bound");
 		return adj[w];
 	}
