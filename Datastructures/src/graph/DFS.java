@@ -2,10 +2,9 @@ package graph;
 
 import java.util.Stack;
 
-import javax.management.RuntimeErrorException;
-
 /**
  * Uses Graph.java
+ * TC: O(V + E)
  * @author Siva R
  *
  */
@@ -90,7 +89,7 @@ public class DFS {
 			if(dfs.marked[i])
 				System.out.print(i + " ");
 		System.out.println();
-		System.out.println("path to 3: ");
+		System.out.println("path to 3(look output in reverse way: ");
 		for(Integer i : dfs.pathTo(3))
 				System.out.print(i + " ");
 			
