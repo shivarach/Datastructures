@@ -1,6 +1,5 @@
 package graph;
 
-import java.util.LinkedList;
 import java.util.Stack;
 
 public class DFSDirectedGraph {
@@ -63,7 +62,7 @@ public class DFSDirectedGraph {
 		DFSDirectedGraph dfs = new DFSDirectedGraph(g, 0);
 		System.out.println("dfs: ");
 		for(int i = 0 ; i < g.V() ;i++)
-			if(dfs.marked[i])
+			if(dfs.marked[i])	
 				System.out.print(i + " ");
 		System.out.println();
 		System.out.println("path to 3(look output in reverse way) ");
