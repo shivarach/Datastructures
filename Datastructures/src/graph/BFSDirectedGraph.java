@@ -15,10 +15,12 @@ public class BFSDirectedGraph {
 	private boolean marked[];
 	private int edgeTo[];
 	private int dist[];
-	private int v;
+	private int v;//number of vertices
+	private int s;
 	
 	public BFSDirectedGraph(DirectedGraph g, int s) {
 		this.v = g.V();
+		this.s = s;
 		marked = new boolean[v];
 		edgeTo = new int[v];
 		dist = new int[v];
@@ -61,7 +63,7 @@ public class BFSDirectedGraph {
 		if(!hasPathTo(v)) return null;
 		Stack<Integer> path = new Stack<Integer>();
 		int x;
-		for(x = v; dist[x] != 0; x = edgeTo[x])
+		for(x = v; x != s; x = edgeTo[x])
 			path.push(x);
 		path.push(x);
 		return path;

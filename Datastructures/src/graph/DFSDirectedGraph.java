@@ -37,7 +37,7 @@ public class DFSDirectedGraph {
 	public Iterable<Integer> pathTo(int v) {
 		validate(v);
 		Stack<Integer> stack = new Stack<Integer>();
-		for(int x = v ; edgeTo[x] != s; x = edgeTo[x])
+		for(int x = v ; x != s; x = edgeTo[x])
 			stack.push(x);
 		stack.push(s);
 		return stack;
