@@ -24,7 +24,6 @@ public class TopologicalOrder {
 		visited[i] = true;
 		for(int w : g.getAdjacentVertices(i)) {
 			if(!visited[w]) {
-				visited[w] = true;
 				dfs(g, w);
 			}
 		}
