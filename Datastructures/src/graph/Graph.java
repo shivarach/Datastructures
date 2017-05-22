@@ -10,7 +10,7 @@ public class Graph {
 	private List<Integer>[] adj;
 	
 	public Graph(int v) {
-		if (v < 0) throw new IllegalArgumentException("Number of vertices must be nonnegative");
+		if (v < 0) throw new IllegalArgumentException("Number of vertices must be non-negative");
 		this.v = v;
 		adj = (List<Integer>[])new LinkedList[v];
 		for(int i = 0; i < v; i++) {
@@ -36,9 +36,6 @@ public class Graph {
 		return e;
 	}
 
-	public void setE(int e) {
-		this.e = e;
-	}
 
 	public int getV() {
 		return v;
