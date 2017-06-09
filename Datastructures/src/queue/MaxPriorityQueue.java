@@ -27,7 +27,7 @@ public class MaxPriorityQueue<Key> {
 		if(size == 0) throw new NoSuchElementException("priority queue is empty!");
 		Key max = pq[1];
 		pq[1] = pq[size];
-		pq[size] = null; //to avoid loitering
+		pq[size--] = null; //to avoid loitering
 		sink(1);
 		//resize
 		if (size + 1 <= pq.length / 4)
