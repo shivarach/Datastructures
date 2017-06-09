@@ -15,6 +15,7 @@ public class DFSDirectedGraph {
 	}
 	private void dfs(DirectedGraph g, int s) {
 		validate(s);
+		marked[s] = true;
 		for(int i : g.getAdjacentVertices(s)) {
 			if(!marked[i]) {
 				marked[i] = true;
