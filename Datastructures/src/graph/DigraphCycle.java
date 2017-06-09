@@ -18,6 +18,8 @@ public class DigraphCycle {
 	}
 
 	public boolean isCyclic() {
+		//all nodes may not be connected. so this loop
+		//look for all separate components
 		for (int i = 0; i < g.V(); i++) {
 			if (!visited[i] && isCyclic(i))
 				return true;
