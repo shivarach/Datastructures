@@ -70,10 +70,23 @@ public class MyHashMap<Key, Value> {
 		}
 		return null;
 	}
+	
+	private Node getNode(Key key) {
+		int i = hash(key);
+		LinkedList<Node> ll = map[i];
+		for(Node node : ll) {
+			if(node.key.equals(key)) {
+				return node;
+			}
+		}
+		return null;
+	}
 	public void delete(Key key) {
 		int i = hash(key);
-		if(contains(key)) {
-			map[i].remove(new Node(key, get(key)));
+		Node x = getNode(key);
+		if (x != null)
+		{
+			map[i].remove(x);
 			size--;
 		}
 	}
