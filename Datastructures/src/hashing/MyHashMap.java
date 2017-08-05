@@ -30,7 +30,7 @@ public class MyHashMap<Key, Value> {
 	}
 	
 	public int hash(Key key) {
-		return (key.hashCode() & 0x7fffffff) % CAPACITY;
+		return (key.hashCode() & Integer.MAX_VALUE) % CAPACITY;
 	}
 	
 	public void put(Key key, Value value) {
